@@ -1,0 +1,131 @@
+.footer {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background: #009BD9;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #FFFFFF;
+        margin-bottom: 40px;
+
+
+    }
+
+    &__logo {
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav-link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        &:not(:last-child){
+            margin-right: 50px;
+        }
+    }
+
+    &__btn {
+        width: 55px;
+        height: 55px;
+        background-image: url('../img/footer-arrow.svg');
+        background-repeat: no-repeat;
+
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__item {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 1340px) {
+        &__nav-link{
+            font-size: 15px;
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+        }
+
+        &__list{
+            margin-right: 20px;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        &__logo{
+            & img{
+                object-fit: contain;
+                width: 100%;
+
+            }
+        }
+
+        &__nav{
+            display: flex;
+            flex-direction: column;
+            margin-right: 70px;
+            
+        }
+
+        &__nav-link{
+            font-size: 15px;
+            &:not(:last-child){
+                margin-right: 0px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__list{
+            margin-right: 20px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 576px) {
+        &__top{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__logo{
+            margin-bottom: 20px;
+        }
+
+        &__nav{
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+
+        &__bottom{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__list{
+            margin-right: 0px;
+        }
+    }
+}
+

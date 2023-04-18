@@ -1,0 +1,511 @@
+.hero {
+    position: relative;
+    padding-bottom: 240px;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 381px;
+      height: 359px;
+      top: 145px;
+      left: 0px;
+      background-image: url('../img/hero-tg-1.svg');
+      background-repeat: no-repeat;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      width: 109px;
+      height: 162px;
+      top: -18px;
+      right: 0px;
+      background-image: url('../img/hero-tg-3.svg');
+      background-repeat: no-repeat;
+
+    }
+
+    &__blur-one{
+        content: '';
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        top: 254px;
+        left: -75px;
+        border-radius: 50%;
+        background: linear-gradient(135.04deg, #009BD9 15.03%, rgba(0, 155, 217, 0) 91.74%);
+        filter: blur(100px);
+    
+        
+    }
+
+    &__blur-two{
+        content: '';
+        position: absolute;
+        width: 237px;
+        height: 237px;
+        top: 60px;
+        right: -110px;
+        border-radius: 50%;
+        background: linear-gradient(135.04deg, #009BD9 15.03%, rgba(0, 155, 217, 0) 91.74%);
+        filter: blur(125px);
+        
+    }
+
+
+    &__top {
+        position: relative;
+        display: flex;
+        margin-bottom: 103px;
+        
+    }
+
+    &__title-block {
+        display: flex;
+        flex-direction: column;
+        max-width: 700px;
+        margin-right: 69px;
+      
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 69px;
+        color: #333333;
+        margin-bottom: 50px;
+        & span{
+            color: #009BD9;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        color: rgba(51, 51, 51, 0.8);
+    }
+
+    &__right{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 11px;
+            left: 9px;
+            background-image: url('../img/hero-tg-2.svg');
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+    }
+
+    &__form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 25px 30px 25px;
+        background: linear-gradient(118.48deg, rgba(246, 252, 255, 0.1) 1.04%, rgba(0, 182, 255, 0) 123.54%);
+        filter: drop-shadow(1px 4px 11px rgba(0, 155, 217, 0.08)) drop-shadow(0px 3px 11px rgba(0, 155, 217, 0.08));
+        backdrop-filter: blur(5px);
+        color: linear-gradient(rgba(246, 252, 255, 0.1), rgba(0, 182, 255, 0));
+        box-shadow: 0px 3px 11px 0px rgba(0, 155, 217, 0.08);
+        box-shadow: 1px 4px 11px 0px rgba(0, 155, 217, 0.08);
+        border-radius: 30px;
+        margin-top: 33px;
+        z-index: 5;
+        
+    }
+
+    &__form-block{
+        position: relative;
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+       
+
+    }
+
+    &__label {
+        display: flex;
+        min-height: 55px;
+        width: 400px;
+        border-radius: 5px 5px 0px 0px;
+        // margin-bottom: 25px;
+        
+    }
+    &__input {
+        width: 250px;
+        background: rgba(0, 155, 217, 0.08);
+        min-height: 55px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+        border: none;
+        padding: 0px 20px 0px 20px;
+        &::placeholder{
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgba(51, 51, 51, 0.6);
+        }
+
+    }
+
+    &__select{
+        position: relative;
+        min-height: 55px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__select-flag{
+      width: 23px;
+      height: 17px;
+      margin-right: 10px;
+     
+    }
+
+    &__select-current{
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 55px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+        border: none;
+        padding-right: 45px;
+        background: rgba(0, 155, 217, 0.08);
+        cursor: pointer;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 6px;
+            top: 25px;
+            right: 25px;
+            background-image: url('../img/drop-arrow.svg');
+            background-repeat: no-repeat;
+        
+        }
+    }
+
+    &__select-list{
+        position: absolute;
+        top: 40px;
+        left: -7px;
+        border: 1px solid #333333;
+        background: rgba(0, 155, 217, 0.08);
+        padding: 5px;
+        z-index: 3;
+        display: none;
+
+    }
+
+    &__select-item{
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #333333;
+        margin-bottom: 5px;
+        cursor: pointer;
+        &:hover{
+            background: #009BD9;
+            color: #FFFFFF;
+        }
+    }
+
+    &__select.active .hero__select-list{
+        display: block;
+    }
+
+
+
+
+    &__info {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(51, 51, 51, 0.5);
+        margin-bottom: 18px;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 49px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        background: #009BD9;
+        border-radius: 36px;
+        padding: 0px 30px 0px 30px;
+    }
+
+    //bottom
+
+    &__bottom {
+    
+    }
+
+    &__card-list {
+        display: flex;
+    }
+
+    &__card-item {
+        position: relative;
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #FFFFFF;
+        background-repeat: no-repeat;
+        box-shadow: inset -1px -1px 4px rgba(0, 155, 217, 0.06), inset 4px 4px 4px rgba(0, 155, 217, 0.06);
+        border-radius: 15px;
+        padding: 25px 25px 25px 30px;
+        &:not(:last-child){
+            margin-right: 70px;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 167px;
+            height: 300px;
+            top: 0px;
+            right: 0px;
+            background-image: url('../img/hero-card-bg.svg');
+            background-repeat: no-repeat;
+        }
+
+        &:hover{
+            background: #009BD9;
+            .hero__card-descr{
+                color: #FFFFFF;
+            }
+
+            .hero__card-img path{
+                fill: #FFFFFF;
+            }
+        }
+
+
+    }
+
+    &__card-img {
+        margin-bottom: 20px;
+    }
+
+    &__card-descr {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 130%;
+        color: #009BD9;
+    }
+
+    @media screen and (max-width: 1340px) {
+        &__blur-one{
+            z-index: 2;
+        }
+
+        &__top{
+            position: relative;
+            z-index: 3;
+        }
+
+        &__title{
+            font-size: 36px;
+            line-height: 160%;
+        }
+
+        &__subtitle{
+            font-size: 21px;
+        }
+
+        &__card-item::after{
+            height: 100%;
+            background-size: cover;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        &__top{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title-block{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 0px;
+        }
+
+        &__title{
+            text-align: center;
+        }
+
+        &__subtitle{
+            text-align: center;
+        }
+
+        &__card-list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__card-item:not(:last-child){
+           margin-right: 0px;
+           margin-bottom: 20px;
+        } 
+    }
+
+    @media screen and (max-width: 768px) {
+        &{
+            padding-bottom: 80px;
+        }
+        &__title{
+            font-size: 30px;
+            line-height: 140%;
+        }
+
+        &__subtitle{
+            line-height: 140%;
+        }
+
+        &__top{
+            margin-bottom: 80px;
+        }
+
+        &__card-item {
+    
+            &:hover{
+                background: #FFFFFF;
+                .hero__card-descr{
+                    color: #009BD9;
+                }
+    
+                .hero__card-img path{
+                    fill: #009BD9;
+                }
+            }
+    
+    
+        }
+
+        
+        
+    }
+
+    @media screen and (max-width: 576px) {
+        &{
+            padding-bottom: 50px;
+        }
+
+        &__blur-one{
+            display: none;
+        }
+
+        &__blur-two{
+            display: none;
+        }
+
+
+        &__title{
+            font-size: 26px;
+            margin-bottom: 30px;
+        }
+
+        &__top{
+            margin-bottom: 50px;
+        }
+
+        &__subtitle{
+            font-size: 14px;
+        }
+
+        &__form{
+            max-width: 100%;
+        }
+
+        &__label{
+            width: 280px;
+        }
+
+        &__input{
+            max-width: 125px;
+        }
+
+        &__card-item{
+            max-width: 100%;
+        }
+
+        &__card-descr{
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 350px) {
+
+        &::before{
+            display: none;
+        }
+
+        &::after{
+            display: none;
+        }
+
+        &__title{
+            font-size: 25px;
+        }
+
+        &__subtitle{
+            font-size: 13px;
+        }
+
+        &__label{
+            max-width: 230px;
+        }
+
+        &__input{
+            max-width: 80px;
+            &::placeholder{
+                font-size: 12px;
+            }
+        }
+
+        &__info{
+            font-size: 12px;
+        }
+
+        &__button{
+            font-size: 12px;
+        }
+
+        &__card-item{
+            max-width: 80%;
+        }
+
+        &__card-descr{
+            font-size: 12px;
+        }
+
+      
+    }
+
+
+
+}
